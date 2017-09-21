@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Intaractivity\OpenFileDialogAction.cs" />
     <Compile Include="IOpenFileDialogService.cs" />
+    <Compile Include="IOpenFileDialogServiceFactory.cs" />
     <Compile Include="OpenFileDialogService.cs" />
+    <Compile Include="OpenFileDialogServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,7 +23,9 @@
         <Button Content="Button" VerticalAlignment="Center" Width="75" Margin="5">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
-                    <intaractivity:OpenFileDialogAction SelectedFileName="{Binding FilePath}"/>
+                    <intaractivity:OpenFileDialogAction 
+                        Title="{Binding Title}"
+                        FileName="{Binding FilePath}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>

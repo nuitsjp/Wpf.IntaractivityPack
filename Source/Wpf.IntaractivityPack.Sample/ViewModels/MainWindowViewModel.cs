@@ -7,11 +7,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Reactive.Bindings;
+using Microsoft.Win32;
 
 namespace Wpf.IntaractivityPack.Sample.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        public bool AddExtension { get; set; } = true;
+
+        public bool CheckFileExists { get; set; } = true;
+
+        public bool CheckPathExists { get; set; }
+
+        public IList<FileDialogCustomPlace> CustomPlaces { get; set; } = new List<FileDialogCustomPlace>();
+
+        public string DefaultExt { get; set; } = string.Empty;
+
+        public bool DereferenceLinks { get; set; } = false;
+
+        public string Filter { get; set; } = string.Empty;
+
+        public int FilterIndex { get; set; } = 1;
+
+        public string InitialDirectory { get; set; } = string.Empty;
+
+        public object Tag { get; set; }
+
+        public string Title { get; set; } = "ファイル選択ダイアログタイトル";
+
+        public bool ValidateNames { get; set; }
+
         private string _filePath;
 
         public string FilePath
@@ -19,6 +44,9 @@ namespace Wpf.IntaractivityPack.Sample.ViewModels
             get => _filePath;
             set => SetProperty(ref _filePath, value);
         }
+
+        public string SafeFileName { get; set; }
+
 
         public ReactiveCommand<string> SelectedFileCommand { get; }
 
