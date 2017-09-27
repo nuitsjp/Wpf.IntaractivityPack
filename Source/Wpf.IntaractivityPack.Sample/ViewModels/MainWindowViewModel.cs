@@ -35,14 +35,23 @@ namespace Wpf.IntaractivityPack.Sample.ViewModels
 
         public string Title { get; set; } = "ファイル選択ダイアログタイトル";
 
+        public string OpenFilesTitle { get; set; } = "複数ファイル選択ダイアログタイトル";
+
         public bool ValidateNames { get; set; }
 
         private string _filePath;
+        private string[] _filePaths;
 
         public string FilePath
         {
             get => _filePath;
             set => SetProperty(ref _filePath, value);
+        }
+
+        public string[] FilePaths
+        {
+            get => _filePaths;
+            set => SetProperty(ref _filePaths, value);
         }
 
         public string SafeFileName { get; set; }

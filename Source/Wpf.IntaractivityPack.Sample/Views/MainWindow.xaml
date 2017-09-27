@@ -14,13 +14,14 @@
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" VerticalAlignment="Center" Width="75" Margin="5">
+        <Button Content="Open File" VerticalAlignment="Center" Width="75" Margin="5">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <intaractivity:OpenFileDialogAction 
@@ -30,5 +31,16 @@
             </i:Interaction.Triggers>
         </Button>
         <Label Grid.Row="0" Grid.Column="1" Content="{Binding FilePath}" VerticalAlignment="Center"/>
+
+        <Button Grid.Row="1" Grid.Column="0" Content="Open Files" VerticalAlignment="Center" Width="75" Margin="5">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <intaractivity:OpenFilesDialogAction 
+                        Title="{Binding OpenFilesTitle}"
+                        FileNames="{Binding FilePaths, Mode=TwoWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Label Grid.Row="1" Grid.Column="1" Content="{Binding FilePaths}" VerticalAlignment="Center"/>
     </Grid>
 </Window>

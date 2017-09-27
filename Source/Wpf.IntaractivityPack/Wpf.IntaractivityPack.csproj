@@ -44,11 +44,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileDialogService.cs" />
+    <Compile Include="IFileDialogService.cs" />
+    <Compile Include="Intaractivity\FileDialogAction.cs" />
+    <Compile Include="Intaractivity\OpenFilesDialogAction.cs" />
     <Compile Include="Intaractivity\OpenFileDialogAction.cs" />
     <Compile Include="IOpenFileDialogService.cs" />
     <Compile Include="IOpenFileDialogServiceFactory.cs" />
+    <Compile Include="IOpenFilesDialogServiceFactory.cs" />
+    <Compile Include="IOpenFilesDialogService.cs" />
     <Compile Include="OpenFileDialogService.cs" />
     <Compile Include="OpenFileDialogServiceFactory.cs" />
+    <Compile Include="OpenFilesDialogService.cs" />
+    <Compile Include="OpenFilesDialogServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
